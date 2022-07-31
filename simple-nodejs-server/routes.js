@@ -1,10 +1,9 @@
-const http = require('http');
 const fs = require("fs");
-const DEFAULT_PORT = 3000;
 
-const server = http.createServer((req, res) => {
+const requestHandler = (req, res) => {
     const url = req.url;
     const method = req.method;
+
     // to read more about headers visit https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
     res.setHeader('Content-Type', 'text/html');
 
@@ -16,10 +15,21 @@ const server = http.createServer((req, res) => {
         return res.end();
     }
     if (url === '/message' && method === 'POST') {
-        fs.writeFileSync('message.txt', 'DUMMY');
-        res.statusCode = 302;
-        res.setHeader('Location', '/');
-        return res.end();
+        const body = [];
+        req.on('data', (chunk) => {
+            console.log('chunk: ', chunk);
+            body.push(chunk);
+        });
+
+        req.on('end', () => {
+            const parsedBody = Buffer.concat(body).toString();
+            const message = parsedBody.split('=')[1];
+            fs.writeFile('message.txt', message, err => {
+                res.statusCode = 302;
+                // res.setHeader('Location', '/'); // TODO: need to check
+                return res.end();
+            });
+        });
     }
 
     res.write('<html lang="us">');
@@ -27,6 +37,8 @@ const server = http.createServer((req, res) => {
     res.write('<body><h1>Hello from the server</h1></body>');
     res.write('</html>');
     res.end();
-});
+}
 
-server.listen(DEFAULT_PORT);
+
+module.exports = requestHandler;
+
