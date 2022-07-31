@@ -4,6 +4,7 @@ const DEFAULT_PORT = 3000;
 const server = http.createServer((req, res) => {
     console.log(`url: ${req.url}; method: ${req.method}; headers :${req.headers}; `);
 
+    // to read more about headers visit https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
     res.setHeader('Content-Type', 'text/html');
     res.write('<html lang="us">');
     res.write('<body><title>My First Page</title></body>');
