@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d98c123-582b-4aee-9082-1110743203b6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/simple-nodejs-server/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-nodejs-server/message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks/task-1/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks/task-1/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks/task-1/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks/task-1/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/simple-nodejs-server/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/simple-nodejs-server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-node-server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-nodejs-server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/simple-nodejs-server/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/task-1/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/task-1/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1659290053052</updated>
       <workItem from="1659290055403" duration="7080000" />
-      <workItem from="1659304060370" duration="200000" />
+      <workItem from="1659304060370" duration="301000" />
     </task>
     <servers />
   </component>
